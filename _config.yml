@@ -8,3 +8,6 @@ url: https://legalchik.github.io
 
 permalink: pretty
 highlighter: rouge
+
+sass:
+  style: :compressed
