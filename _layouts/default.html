@@ -6,6 +6,7 @@
   {% if jekyll.environment == 'production' %}
   {% include analytics.html %}
   {% endif %}
+    <meta name="description" content="{{ page.excerpt | default: site.description | escape }}">
     <title>{% if page.title %}{{ page.title | escape }}{% else %}}{{ site.title | escape }}{% endif %}</title>
   </head>
   <body>
