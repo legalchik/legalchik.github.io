@@ -2,6 +2,9 @@
 layout: default
 title: 𝒍 𝒆 𝒈 𝒂 𝒍 𝒄 𝒉 𝒊 𝒌
 ---
+ {% if jekyll.environment == 'production' %}
+ {% include informer.html %}
+ {% endif %}
 <link rel="stylesheet" href="css/index.css">
 <main>
   <div class="legalchik">
