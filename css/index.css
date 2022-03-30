@@ -19,6 +19,18 @@ html, body {
     overflow: hidden;
 }
 
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 .container{
     display: flex;
     align-items: center;
@@ -126,8 +138,7 @@ html, body {
         width: auto;
         height: 100%;
         margin-top: auto;
-        padding-top: 44px;
-        padding-bottom: 45%;
+        padding: 44px 0;
     }
 
     .legalhik__logo, .title{
@@ -159,19 +170,6 @@ html, body {
         gap: 20px;
         padding: 13px 0;
         gap: 5px;
-        padding-bottom: 50%;
     }
 
-}
-
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
 }
