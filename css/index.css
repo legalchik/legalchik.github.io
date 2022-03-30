@@ -40,7 +40,7 @@ html, body {
     border-radius: 20px;
     padding: 38px 0;
     margin-top: 30px;
-    gap: 15px;
+    gap: 20px;
 
     background: linear-gradient(-45deg, #03001f80, #7403bf80, #ec36bc80, #fdedf880);
     background-size: 300% 300%;
@@ -125,23 +125,44 @@ html, body {
         background: rgba(0 0 0 / 0%);
         width: auto;
         height: 100%;
-        gap: 20px;
-        margin-top: 0px;
-        padding: 20px 0;
-        gap: 5px;
+        margin-top: auto;
+        padding-top: 44px;
+        padding-bottom: 45%;
     }
 
-    .legalhik__logo{
-        max-width: 55%
+    .legalhik__logo, .title{
+        max-width: 45%
+    }
+
+    .social{
+        gap: 8px;
+        padding-top: 10px;
     }
 
     .social__link{
         background: rgb(62 62 62 / 10%);
     }
 
-
 }
 
+
+@media(max-width: 360px){
+
+    .title{
+        margin-top: 2px;
+    }
+
+    .wrapper{
+        background: rgba(0 0 0 / 0%);
+        width: auto;
+        height: 100%;
+        gap: 20px;
+        padding: 13px 0;
+        gap: 5px;
+        padding-bottom: 50%;
+    }
+
+}
 
 @keyframes gradient {
     0% {
