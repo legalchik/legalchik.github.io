@@ -13,12 +13,10 @@
     /*margin: 0 auto;*/
 }
 
-img{
-    max-width: 100%;
-}
-
-body{
-    background: #0a0a0a;
+html, body {
+    height: 100%;
+    background: radial-gradient(ellipse at bottom, #080017 0%, #020006 100%);
+    overflow: hidden;
 }
 
 .container{
@@ -28,29 +26,40 @@ body{
     
 }
 
-.legalchik__body{
-    background: url("images/fon.png");
-    background-repeat: no-repeat;
-}
-
 .wrapper{
     width: 370px;
     height: 700px;
     display: flex;
     align-items: center;
     flex-direction: column;
-    background: rgba(112, 24, 127, 0.25);
+    background: rgb(203 159 255 / 10%);
+    backdrop-filter: blur(2px);
     z-index: 100;
-    border: 1px solid rgba(255, 0, 0, 0.5);
+    border: 1px solid rgb(216 0 0);
     box-sizing: border-box;
     border-radius: 20px;
-    padding: 40px 0;
-    margin-top: 30px
-    /*gap: 20px;*/
+    padding: 38px 0;
+    margin-top: 30px;
+    gap: 15px;
+
+    background: linear-gradient(-45deg, #03001f80, #7403bf80, #ec36bc80, #fdedf880);
+    background-size: 300% 300%;
+    animation: gradient 12s ease infinite;
+}
+
+.legalhik__logo{
+    border-radius: 50%;
+}
+
+.logo_stroke{
+    background: rgb(201 177 240);
+    filter: blur(15px);
+    position: absolute;
+    z-index: -1;
 }
 
 .title{
-    padding-top: 20px;
+    margin-top: 10px;
 }
 
 .nav__menu{
@@ -74,7 +83,7 @@ body{
     align-items: center;
     flex-direction: column;
     gap: 5px;
-    padding-top: 10px;
+    /*padding-top: 10px;*/
 }
 
 .social__link{
@@ -89,7 +98,7 @@ body{
     color: #FFFFFF;
     padding: 6px 0;
     background: rgba(0, 0, 0, 0.1);
-    transition: 0.3s all;
+    transition: 0.4s all;
 }
 
 .social__link:hover{
@@ -113,11 +122,35 @@ body{
     }
 
     .wrapper{
+        background: rgba(0 0 0 / 0%);
         width: auto;
         height: 100%;
-        border: none;
-        border-radius: 0;
         gap: 20px;
+        margin-top: 0px;
+        padding: 20px 0;
+        gap: 5px;
     }
 
+    .legalhik__logo{
+        max-width: 55%
+    }
+
+    .social__link{
+        background: rgb(62 62 62 / 10%);
+    }
+
+
+}
+
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
