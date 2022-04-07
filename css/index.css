@@ -53,8 +53,8 @@ html, body {
     margin-top: 30px;
     gap: 20px;
 
-    background: linear-gradient(-45deg, #03001f80, #7403bf80, #ec36bc80, #fdedf880);
-    background-size: 300% 300%;
+    background: linear-gradient(142deg, #00000080, #54008d91, #a1007680, #fff1f18a);
+    background-size: 300% 250%;
     animation: gradient 12s ease infinite;
 }
 
