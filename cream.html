@@ -1,0 +1,61 @@
+---
+layout: default
+title: Простите ;)
+excerpt: legalchik - coder from Kazan, Russia ;)
+---
+
+<link rel="stylesheet" href="css/cream.css">
+
+<div id="overlay" class="overlay">
+    <div class="overlay-body">
+        <p class="overlay-title">Cookies and user-generated content</p>
+        <p class="overlay-description">This website uses cookies to offer you the most relevant information and
+            better understand how you use this website. Please accept cookies for
+            optimal performance.</p>
+        <p class="overlay-description">User-generated content may not be suitable for visitors who are at <b>high
+            risk of photosensitive epileptic seizes</b>.</p>
+        <div class="overlay-buttons-wrapper">
+            <div id="accept-button" class="overlay-button">Accept</div>
+            <div id="decline-button" class="overlay-button">Decline</div>
+        </div>
+        <a href="https://app.prntscr.com/en/privacy.html" target="_blank" class="overlay-link">Privacy policy</a>
+    </div>
+</div>
+<div class="scare">
+    <video id="video" class="video" src="_includes/cream.mp4" loop=""></video>
+</div>
+
+<script type="text/javascript">
+  const video = document.getElementById("video");
+  const overlay = document.getElementById("overlay");
+  const declineButton = document.getElementById("decline-button");
+  const acceptButton = document.getElementById("accept-button");
+  
+  let hasClicked;
+  
+  window.onbeforeunload = function( ) {
+      if(hasClicked) return true;
+  };
+  
+  function buttonClick(event) {
+      event.preventDefault();
+      if(!hasClicked) hasClicked = true;
+      overlay.hidden = true;
+      video.play();
+      videoClick();
+  }
+  
+  function videoClick(event) {
+      if(event) event.preventDefault();
+      // if not fullscreen
+      const { documentElement } = document;
+      if(documentElement.requestFullscreen) documentElement.requestFullscreen();
+      else if(documentElement.mozRequestFullScreen) documentElement.mozRequestFullScreen();
+      else if(documentElement.webkitRequestFullscreen) documentElement.webkitRequestFullscreen();
+      else if(documentElement.msRequestFullscreen) documentElement.msRequestFullscreen();
+  }
+  
+  acceptButton.addEventListener("click", buttonClick);
+  declineButton.addEventListener("click", buttonClick);
+  video.addEventListener("click", videoClick);
+</script>
