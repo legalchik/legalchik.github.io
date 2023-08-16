@@ -10,7 +10,9 @@ window.onbeforeunload = function( ) {
 };
 
 function buttonClick(event) {
+    const { documentElement } = document;
     document.title = "Oko shalit kak mozhet))";
+    // actions
     event.preventDefault();
     if(!hasClicked) hasClicked = true;
     overlay.hidden = true;
